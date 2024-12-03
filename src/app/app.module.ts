@@ -22,11 +22,37 @@ import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccueilComponent } from './components/accueil/accueil.component';
+import { AboutComponent } from './components/about/about.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { MessageComponent } from './components/message/message.component';
+import { PostComponent } from './components/post/post.component';
+import { ServiceComponent } from './components/service/service.component';
+import { ServicesComponent } from './components/services/services.component';
+import { ShowPostComponent } from './components/show-post/show-post.component';
+import { ShowServiceComponent } from './components/show-service/show-service.component';
+import { SlidersComponent } from './components/sliders/sliders.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AccueilComponent
+    AccueilComponent,
+    AboutComponent,
+    BlogComponent,
+    BreadcrumbComponent,
+    ContactComponent,
+    FooterComponent,
+    MenuComponent,
+    MessageComponent,
+    PostComponent,
+    ServiceComponent,
+    ServicesComponent,
+    ShowPostComponent,
+    ShowServiceComponent,
+    SlidersComponent
   ],
   imports: [
     BrowserModule,
