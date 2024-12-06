@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
+import { DataService } from './data.service';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PostService {
+export class PostService extends DataService{
 
-  constructor() { }
+  constructor(http : HttpClient) {
+    super('//localhost/8000/posts' , http);
+   }
 }
