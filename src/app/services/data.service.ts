@@ -11,7 +11,8 @@ import { response } from 'express';
   providedIn: 'root'
 })
 export class DataService {
-  private urlAPI ='https://jsonplaceholder.typicode.com/posts';
+  // private urlAPI ='https://jsonplaceholder.typicode.com/posts';
+  private urlAPI ='//localhost/api/8000/posts';
   // constructor(urlAPI : any,private http: HttpClient) 
   constructor(@Inject(String) private url: string, private http: HttpClient) {}
 

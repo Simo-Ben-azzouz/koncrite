@@ -29,12 +29,13 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { MessageComponent } from './components/message/message.component';
-import { PostComponent } from './components/post/post.component';
 import { ServiceComponent } from './components/service/service.component';
 import { ServicesComponent } from './components/services/services.component';
 import { ShowPostComponent } from './components/show-post/show-post.component';
 import { ShowServiceComponent } from './components/show-service/show-service.component';
 import { SlidersComponent } from './components/sliders/sliders.component';
+import { PostsComponent } from './components/posts/posts.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -47,15 +48,16 @@ import { SlidersComponent } from './components/sliders/sliders.component';
     FooterComponent,
     MenuComponent,
     MessageComponent,
-    PostComponent,
     ServiceComponent,
     ServicesComponent,
     ShowPostComponent,
     ShowServiceComponent,
-    SlidersComponent
+    SlidersComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     MdbAccordionModule,
     MdbCarouselModule,
