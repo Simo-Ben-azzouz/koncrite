@@ -8,6 +8,6 @@ import { HttpClient } from '@angular/common/http';
 export class PostService extends DataService{
 
   constructor(http : HttpClient) {
-    super('//localhost/8000/posts' , http);
+    super('http://localhost:8000/api/posts' , http);
    }
 }

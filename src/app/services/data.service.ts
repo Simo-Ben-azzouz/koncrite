@@ -12,9 +12,9 @@ import { response } from 'express';
 })
 export class DataService {
   // private urlAPI ='https://jsonplaceholder.typicode.com/posts';
-  private urlAPI ='//localhost/api/8000/posts';
+  // private urlAPI : any;
   // constructor(urlAPI : any,private http: HttpClient) 
-  constructor(@Inject(String) private url: string, private http: HttpClient) {}
+  constructor(@Inject(String) private urlAPI: string, private http: HttpClient) {}
 
 
   getAll(): Observable<any> {
