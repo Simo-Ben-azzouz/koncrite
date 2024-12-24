@@ -1,1 +1,13 @@
-<p>sliders works!</p>
+<mdb-carousel *ngIf="slides?.length" [interval]="0" [controls]="true" [indicators]="true" [animation]="'fade'">
+  <mdb-carousel-item *ngFor="let slide of slides">
+    <img
+      src="{{slide.image}}"
+      class="d-block w-100"
+      alt="{{slide.titre}}"
+    />
+    <div class="carousel-caption d-none d-md-block">
+      <h5>{{ slide.titre }}</h5>
+      <p>{{ slide.description }}</p>
+    </div>
+  </mdb-carousel-item>
+</mdb-carousel>

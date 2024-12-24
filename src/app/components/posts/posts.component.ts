@@ -7,9 +7,7 @@ import { PostService } from '../../services/post.service';
   styleUrl: './posts.component.scss'
 })
 export class PostsComponent {
-
-  
-  
+  posts :any[]=[];
   constructor(private postsService : PostService) {}
 
   ngOnInit(){
@@ -18,7 +16,7 @@ export class PostsComponent {
 
   getAllPosts(){
     this.postsService.getAll().subscribe(
-      posts => console.log(posts)
+      posts => this.posts = posts.data
       
     )
   }
