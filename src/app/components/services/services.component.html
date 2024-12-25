@@ -1,1 +1,25 @@
-<p>services works!</p>
+<div class="row">
+    <div class="col-md-4" *ngFor="let service of services">
+      <div class="card">
+        <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+          <img
+            src="{{ service.image }}"
+            class="img-fluid"
+            alt="{{ service.titre }}"
+          />
+          <a href="#!">
+            <div
+              class="mask"
+              style="background-color: rgba(251, 251, 251, 0.15);"
+            ></div>
+          </a>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ service.titre }}</h5>
+          <p class="card-text">{{ service.extrait }}</p> <!-- Fixed 'exttait' typo -->
+          <a href="#!" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  

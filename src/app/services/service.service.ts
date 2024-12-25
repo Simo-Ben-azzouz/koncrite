@@ -5,7 +5,9 @@ import { DataService } from './data.service';
 @Injectable({
   providedIn: 'root'
 })
-export class ServiceService {
+export class ServiceService extends DataService{
 
-  constructor() { }
+  constructor(http : HttpClient) {
+    super('http://localhost:8000/api/posts' , http);
+   }
 }
