@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { PostService } from '../../services/post.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { PostService } from '../../services/post.service';
   styleUrl: './posts.component.scss'
 })
 export class PostsComponent {
-  rowsOfPost : number = 4;
+  @Input() rowsOfPost :any;
   posts :any[]=[];
   constructor(private postsService : PostService) {}
 

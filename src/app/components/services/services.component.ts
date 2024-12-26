@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ServiceService } from '../../services/service.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { ServiceService } from '../../services/service.service';
   styleUrls: ['./services.component.scss'] // Fixed 'styleUrl' typo to 'styleUrls'
 })
 export class ServicesComponent implements OnInit {
-  rowOfServices : number = 3;
+  @Input() rowOfServices : any;
   services: any[] = []; // Corrected the variable name to hold the services list
 
   constructor(private serviceService: ServiceService) {} // Fixed naming for better readability
