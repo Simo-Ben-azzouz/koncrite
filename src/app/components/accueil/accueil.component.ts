@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './accueil.component.scss'
 })
 export class AccueilComponent {
-
+  rowPost = 4;
+  rowService = 3;
 }
