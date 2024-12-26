@@ -17,8 +17,8 @@ export class DataService {
   constructor(@Inject(String) private urlAPI: string, private http: HttpClient) {}
 
 
-  getAll(): Observable<any> {
-    return this.http.get(this.urlAPI)
+  getAll(limit?:number): Observable<any> {
+    return this.http.get(this.urlAPI +'/'+ limit)
       .pipe(
         map(response => response),
         catchError(this.handleError)

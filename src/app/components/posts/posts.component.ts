@@ -7,6 +7,7 @@ import { PostService } from '../../services/post.service';
   styleUrl: './posts.component.scss'
 })
 export class PostsComponent {
+  rowsOfPost : number = 4;
   posts :any[]=[];
   constructor(private postsService : PostService) {}
 
@@ -15,7 +16,7 @@ export class PostsComponent {
   }
 
   getAllPosts(){
-    this.postsService.getAll().subscribe(
+    this.postsService.getAll(this.rowsOfPost).subscribe(
       posts => this.posts = posts.data
       
     )

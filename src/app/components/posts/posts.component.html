@@ -1,1 +1,12 @@
-<p>posts works!</p>
+<div class="row">
+    <div class="col-md-6" *ngFor="let post of posts">
+        <div class="card">
+            <img src="{{ post.image }}" class="card-img-top" alt="{{ post.titre }}"/>
+            <div class="card-body">
+              <h5 class="card-title">{{ post.titre }}</h5>
+              <p class="card-text">{{ post.extrait }}</p>
+              <a href="#!" class="btn btn-primary">Button</a>
+            </div>
+          </div>
+    </div>
+</div>

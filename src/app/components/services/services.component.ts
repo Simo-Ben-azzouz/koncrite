@@ -7,6 +7,7 @@ import { ServiceService } from '../../services/service.service';
   styleUrls: ['./services.component.scss'] // Fixed 'styleUrl' typo to 'styleUrls'
 })
 export class ServicesComponent implements OnInit {
+  rowOfServices : number = 3;
   services: any[] = []; // Corrected the variable name to hold the services list
 
   constructor(private serviceService: ServiceService) {} // Fixed naming for better readability
@@ -16,7 +17,7 @@ export class ServicesComponent implements OnInit {
   }
 
   getAllServices(): void {
-    this.serviceService.getAll().subscribe(
+    this.serviceService.getAll(this.rowOfServices).subscribe(
       response => {
         this.services = response.data; // Assign the `data` part of the API response to `services`
       },
