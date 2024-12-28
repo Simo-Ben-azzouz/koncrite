@@ -36,6 +36,7 @@ import { ShowServiceComponent } from './components/show-service/show-service.com
 import { SlidersComponent } from './components/sliders/sliders.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { HttpClientModule } from '@angular/common/http';
     ShowPostComponent,
     ShowServiceComponent,
     SlidersComponent,
-    PostsComponent
+    PostsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
