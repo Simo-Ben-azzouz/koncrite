@@ -25,8 +25,8 @@ export class DataService {
       );
   }  
   
-  getById(): Observable<any> {
-    return this.http.get(this.urlAPI)
+  getById(slug: string): Observable<any> {
+    return this.http.get(this.urlAPI+'/show/'+slug)
       .pipe(
         map(response => response),
         catchError(this.handleError)
